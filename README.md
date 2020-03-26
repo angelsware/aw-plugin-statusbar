@@ -1,6 +1,6 @@
-# aw-plugin-compass
+# aw-plugin-statusbar
 
-Compass plugin for Angels' Ware rendering engine.
+Status bar plugin for Angels' Ware rendering engine.
 
 ### Getting Started
 
@@ -20,8 +20,9 @@ Add the **plugins** section to the **config.yaml** file of your project.
 ```
 
 ```
-Compass::ISensor* compassSensor = Compass::CSensorFactory::create();
-compassSensor->onCreate();
-compassSensor->addListener(this);
+StatusBar::IStatusBar statusBar = StatusBar::CStatusBarFactory::create();
+LOG_INFO("status bar height: %d", statusBar->getStatusBarHeight());
+LOG_INFO("navigation bar height: %d", statusBar->getNavigationBarHeight());
+StatusBar::CStatusBarFactory::destroy(statusBar);
 
 ```
