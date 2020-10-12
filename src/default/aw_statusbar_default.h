@@ -9,8 +9,8 @@ namespace StatusBar {
 	{
 	public:
 		// IStatusBar
-		int getStatusBarHeight() { return 0; }
-		int getNavigationBarHeight() { return 0; }
+		int getStatusBarHeight() override { return 0; }
+		int getNavigationBarHeight() override { return 0; }
 	};
 }
 
